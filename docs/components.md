@@ -6,7 +6,7 @@ Pense em componentes. Considere cada parte de sua UI como um "componente" indivi
 ![](images/component-example.png)
 
 ## Nomeando componentes
-Componentes serão nomeados com **pelo menos duas palavras**, com um hífen entre cada palavra. Exemplos de componentes:
+Componentes serão nomeados com **pelo menos duas palavras**, com um traço entre cada palavra. Exemplos de componentes:
 
   * Um botão de like (`.like-button`)
   * Um formulário de busca (`.search-form`)

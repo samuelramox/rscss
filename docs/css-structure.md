@@ -1,7 +1,7 @@
 # Estrutura CSS
 
 ## Um componente por arquivo
-É recomendável colocar cada componente em seu próprio arquivo.
+Coloque cada componente em seu próprio arquivo.
 
   ```scss
   /* css/components/search-form.scss */
@@ -16,8 +16,8 @@
   }
   ```
 
-## Use o padrão global
-Em sass-rails e stylus, isso facilita incluir todos os componentes:
+## Use padrões globais
+Em sass-rails e stylus, a instrução abaixo inclui todos os componentes facilmente:
 
   ```scss
   @import 'components/*';
@@ -27,7 +27,7 @@ Em sass-rails e stylus, isso facilita incluir todos os componentes:
 Não use mais do que 1 nível de aninhamento. É fácil se perder com muito aninhamento.
 
   ```scss
-  /* ✗ Avoid: 3 levels of nesting */
+  /* ✗ Evite: 3 níveis de aninhamento */
   .image-frame {
     > .description {
       /* ... */
@@ -38,7 +38,7 @@ Não use mais do que 1 nível de aninhamento. É fácil se perder com muito anin
     }
   }
 
-  /* ✓ Better: 2 levels */
+  /* ✓ Melhor: 2 níveis */
   .image-frame {
     > .description { /* ... */ }
     > .description > .icon { /* ... */ }

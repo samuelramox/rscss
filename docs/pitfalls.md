@@ -1,6 +1,6 @@
-# Armadilhas
+# Obstáculos
 
-## Herança através de componentes aninhados
+## Conflitos através de componentes aninhados
 Tenha cuidado com os componentes aninhados com elementos que compartilham o mesmo nome que os elementos em seu container.
 
 ```html
@@ -29,4 +29,4 @@ Tenha cuidado com os componentes aninhados com elementos que compartilham o mesm
 }
 ```
 
-Nesse caso, se `.article-link > .count` não tiver o seletor `>` (filho), ele também será aplicado ao elemento `.vote-box .count`. Esta é uma das razões pelas quais os seletores filho são preferidos.
+Nesse caso, se `.article-link > .count` não tiver o seletor `>` (filho), também será aplicado ao elemento `.vote-box .count`. Esta é uma das razões pelas quais os seletores filho são recomendados.

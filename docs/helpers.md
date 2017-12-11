@@ -1,6 +1,6 @@
 # Helpers
 
-Para classes de propósito geral que pretendem anular os valores, coloque-os em um arquivo separado e nomeie-os com um sublinhado. Eles são coisas que tipicamente são marcadas com *!important*. Use-os com *muita* moderação.
+Para classes de propósito geral que pretendem sobrescrever valores, coloque-os em um arquivo separado e nomeie-os com um travessão. São geralmente coisas que são marcadas com *!important*. Use-os com *muita* moderação.
 
 ```css
 ._unmargin { margin: 0 !important; }
@@ -10,7 +10,7 @@ Para classes de propósito geral que pretendem anular os valores, coloque-os em 
 ```
 
 ## Nomeando helpers
-Prefixe os nomes destas classes com um sublinhado. Isso facilitará a diferenciação dos modificadores definidos no componente. Os sublinhados também parecem um pouco feios, o que é um efeito colateral intencional: o uso de muitos helpers deve ser desencorajado.
+Prefixe os nomes dessas classes com um travessão. Isso facilitará a diferenciação dos modificadores definidos no componente. Os travessões também parecem um pouco feios, o que é um efeito colateral intencional: o uso de muitos helpers deve ser desencorajado.
 
   ```html
   <div class='order-graphs -slim _unmargin'>
@@ -18,4 +18,4 @@ Prefixe os nomes destas classes com um sublinhado. Isso facilitará a diferencia
   ```
 
 ## Organizando helpers
-Coloque todos os helpers em um arquivo chamado `helpers`. Você pode separá-los em múltiplos arquivos, mas é preferível manter o número de helpers no mínimo.
+Coloque todos os helpers em um arquivo chamado `helpers`. Você pode separá-los em múltiplos arquivos, mas é recomendável manter o número de helpers no mínimo.

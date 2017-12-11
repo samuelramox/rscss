@@ -5,7 +5,7 @@ Elementos são coisas dentro do seu componente.
 ![](images/component-elements.png)
 
 ## Nomeando elementos
-Cada componente pode ter elementos. Eles devem ter classes que são apenas **uma palavra**.
+Cada componente pode ter elementos. Eles devem ser classes que são apenas **uma palavra**.
 
 ```scss
 .search-form {
@@ -15,17 +15,17 @@ Cada componente pode ter elementos. Eles devem ter classes que são apenas **uma
 ```
 
 ## Seletores de elementos
-Prefira usar o `>` seletor de filhos sempre que possível. Isto evita herança através de componentes aninhados, e funciona melhor do que seletores descendentes.
+Prefira usar o seletor de filho `>` sempre que possível. Isto evita conflitos através de componentes aninhados e funciona melhor do que seletores descendentes.
 
 ```scss
 .article-card {
   .title     { /* okay */ }
-  > .author  { /* ✓ better */ }
+  > .author  { /* ✓ melhor */ }
 }
 ```
 
-## Com múltiplas palavras
-Para aqueles que precisam de duas ou mais palavras, concatene-os sem traços ou sublinhados.
+## Com várias palavras
+Para classes que precisam de duas ou mais palavras, concatene-os sem traços ou travessões.
 
 ```scss
 .profile-box {
@@ -35,13 +35,13 @@ Para aqueles que precisam de duas ou mais palavras, concatene-os sem traços ou 
 }
 ```
 
-## Evite seletores de tag
-Use classes sempre que possível. Os seletores de tag são bons, mas podem ter uma pequena penalidade de desempenho e podem não ser tão descritivos.
+## Evite seletores de tags
+Use classes sempre que possível. Os seletores de tag são bons, mas podem ter uma pequena penalidade no desempenho e não são tão descritivos.
 
 ```scss
 .article-card {
-  > h3    { /* ✗ avoid */ }
-  > .name { /* ✓ better */ }
+  > h3    { /* ✗ evitar */ }
+  > .name { /* ✓ melhor */ }
 }
 ```
 

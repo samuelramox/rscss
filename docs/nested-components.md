@@ -15,11 +15,11 @@
 Às vezes é necessário aninhar componentes. Aqui estão algumas orientações para fazer isso.
 
 ## Variantes
-Um componente pode precisar aparecer de uma certa maneira quando aninhado em outro componente. Evite modificar o componente aninhado, alcançando ele através do componente que o contém.
+Um componente pode precisar aparecer de maneira diferente quando aninhado em outro componente. Evite modificar o componente aninhado através do componente que o contém.
 
 ```scss
 .article-header {
-  > .vote-box > .up { /* ✗ avoid this */ }
+  > .vote-box > .up { /* ✗ evite isso */ }
 }
 ```
 
@@ -41,7 +41,7 @@ Um componente pode precisar aparecer de uma certa maneira quando aninhado em out
 ```
 
 ## Simplificando componentes aninhados
-Às vezes, ao aninhar componentes, sua marcação pode ficar suja:
+Às vezes, ao aninhar componentes, seu código pode ficar sujo:
 
 ```html
 <div class='search-form'>
@@ -50,7 +50,7 @@ Um componente pode precisar aparecer de uma certa maneira quando aninhado em out
 </div>
 ```
 
-Você pode simplificar isso usando o mecanismo de `@extend` do seu pré-processador:
+Você pode simplificar isso usando a função `@extend` do seu pré-processador CSS:
 
 ```html
 <div class='search-form'>
@@ -69,6 +69,6 @@ Você pode simplificar isso usando o mecanismo de `@extend` do seu pré-processa
 }
 ```
 
-E quanto a repetir elementos, como listas? Saiba mais sobre layouts.
+E quanto a elementos que se repetem, como as listas? Saiba mais sobre Layouts.
 [Continue →](layouts.md)
 <!-- {p:.pull-box} -->

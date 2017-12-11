@@ -27,14 +27,14 @@ Os elementos também podem ter variantes.
   }
   ```
 
-## Prefixados com traço
-Traços são o prefixo preferido para as variantes.
+## Prefixos com traços
+Traços são o prefixo recomendados para as variantes.
 
   * Evita ambiguidades com elementos.
   * Uma classe CSS só pode começar com uma letra, `_` ou `-`.
-  * Traços são mais fáceis de digitar do que sublinhados.
-  * Isso se assemelha a switches nos comandos UNIX (`gcc -O2 -Wall -emit-last`).
+  * Traços são mais fáceis de digitar do que travessões.
+  * Isso se assemelha a interruptores nos comandos UNIX (`gcc -O2 -Wall -emit-last`).
 
-Como você lida com elementos complexos? Aninhe eles.
+Como você lida com elementos complexos? Aninhando.
 [Continue →](nested-components.md)
 <!-- {p:.pull-box} -->

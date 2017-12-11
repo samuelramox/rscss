@@ -1,10 +1,10 @@
-# Dúvidas
+# Receios
 
-Algumas pessoas podem ter dúvidas com essas convenções, tais como:
+Algumas pessoas podem ter receios com estas convenções, tais como:
 
 #### "Mas os traços são chatos"
 
-Você é livre para omití-los e usar somentes palavras regulares, mas mantenha o resto das idéais no lugar (componentes, elementos, variantes).
+Você é livre para omití-los e usar somentes palavras regulares, mas mantenha o resto das ideias no lugar (componentes, elementos, variantes).
 
 #### "Mas eu não consigo pensar em 2 palavras!"
 
@@ -14,7 +14,7 @@ Alguns componentes só precisarão de uma palavra para expressar seu propósito,
   * `.alert-card`
   * `.alert-block`
 
-  Ou elementos em linha:
+  Ou um elemento inline:
 
   * `.link-button`
   * `.link-span`
