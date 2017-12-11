@@ -1,7 +1,7 @@
 Componentes
 ==========
 
-Pense em componentes. Considere cada parte de sua UI como um "componente" individual.
+Pense em componentes. Considere cada pedaço de sua UI como um "componente" individual.
 
 ![](images/component-example.png)
 

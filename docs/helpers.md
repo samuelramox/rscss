@@ -1,6 +1,6 @@
 # Helpers
 
-Para classes de propósito geral que pretendem sobrescrever valores, coloque-os em um arquivo separado e nomeie-os com um travessão. São geralmente coisas que são marcadas com *!important*. Use-os com *muita* moderação.
+Para classes de propósito geral que pretendem sobrescrever valores, coloque-as em um arquivo separado e nomeie-as com um travessão. São geralmente coisas que são marcadas com *!important*. Use-as com *muita* moderação.
 
 ```css
 ._unmargin { margin: 0 !important; }

@@ -12,7 +12,7 @@ Componentes devem ser feitos de forma a serem reutilizáveis ​​em diferentes
 
 ## Dimensões fixas
 
-A exceção a isso podem ser os elementos que possuem largura/alturas fixas, como avatares e logotipos.
+Exceção a isso podem ser os elementos que possuem largura/alturas fixas, como avatares e logotipos.
 
 ## Definir posicionamento nos pais
 
@@ -38,6 +38,6 @@ Se você precisar definir isso, tente defini-los no contexto em que estão. No e
   }
   ```
 
-Como você aplica margens fora de um layout? Experimente com os Helpers.
+Como você aplica margens fora de um layout? Tente com os Helpers.
 [Continue →](helpers.md)
 <!-- {p:.pull-box} -->

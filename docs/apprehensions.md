@@ -4,7 +4,7 @@ Algumas pessoas podem ter receios com estas convenções, tais como:
 
 #### "Mas os traços são chatos"
 
-Você é livre para omití-los e usar somentes palavras regulares, mas mantenha o resto das ideias no lugar (componentes, elementos, variantes).
+Você é livre para omití-los e usar somentes palavras, mas mantenha o resto das ideias no lugar (componentes, elementos, variantes).
 
 #### "Mas eu não consigo pensar em 2 palavras!"
 

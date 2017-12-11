@@ -23,7 +23,7 @@ Em sass-rails e stylus, a instrução abaixo inclui todos os componentes facilme
   @import 'components/*';
   ```
 
-## Evite o excesso de aninhamento
+## Evite excesso de aninhamento
 Não use mais do que 1 nível de aninhamento. É fácil se perder com muito aninhamento.
 
   ```scss
