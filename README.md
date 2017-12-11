@@ -1,4 +1,4 @@
-##### Viewing this from GitHub? Visit the website for the full experience. **[rscss.io →](http://rscss.io)**
+##### Visualizando isso no GitHub? Visite o site para uma experiência completa. **[rscss.io →](http://rscss.io)**
 <!-- {h5: style='display:none'} -->
 
 ----
@@ -10,21 +10,22 @@
 
 > Styling CSS without losing your sanity
 
-Reasonable System for CSS Stylesheet Structure.<br>
-A set of simple ideas to guide your process of building maintainable CSS.
+Reasonable Systema for CSS Stylesheet Structure.<br>
+> Sistema Razoável para Estruturar CSS
+Um conjunto de idéias simples para orientar seu processo de construção de CSS escalável.
 
-Introduction
+Introdução
 ------------
 
-Any CSS greater than 1000 lines will get unwieldy. You'll eventually run into these common pitfalls:
+Qualquer CSS com mais de 1000 linhas ficará complicado. Você acabará encontrando essas armadilhas comuns:
 
-* "What does this class mean?"
-* "Is this class still being used?"
-* "If I make a new class `green`, will there be a clash?"
+* "O que significa esta classe?"
+* "Esta classe ainda está sendo usada?"
+* "Se eu fizer uma nova classe `green`, ocorrerá um conflito?"
 
-**rscss** is an attempt to make sense of all these. It is not a framework. It's simply a set of ideas to guide your process of building maintainable CSS for any modern website or application.
+**rscss** é uma tentativa de dar sentido a tudo isso. Não é um framework. É simplesmente um conjunto de idéias para orientar seu processo de construção de CSS escalável para qualquer site ou aplicativo moderno.
 
-Let's get started by learning about components.
+Vamos começar aprendendo sobre componentes.
 [Continue →](docs/components.md)
 <!-- {p:.pull-box} -->
 
