@@ -1,120 +1,172 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
-    <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>Variants</title>
-    <meta name="viewport" content="width=device-width">
-    <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
-        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
-      }
-    </script>
-  </head>
-  <body class="-menu-visible">
-    <div class="doc-layout">
-      <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-variants">
-        <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
-              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+  <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+  <script src="assets/script.js?t=2bcc4b59"></script>
+  <title>Variantes</title>
+  <meta name="viewport" content="width=device-width">
+  <script>
+    if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      (function (d, o, c, p, r, e, s) {
+        d['GoogleAnalyticsObject'] = r;
+        d[r] = d[r] || function () {
+          (d[r].q = d[r].q || []).push(arguments)
+        }, d[r].l = 1 * new Date();
+        e = o.createElement(c), s = o.getElementsByTagName(c)[0];
+        e.async = 1;
+        e.src = p;
+        s.parentNode.insertBefore(e, s)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', "UA-70062028-1", 'auto')
+    }
+  </script>
+</head>
+
+<body class="-menu-visible">
+  <div class="doc-layout">
+    <div class="toggle menu-toggle js-menu-toggle"></div>
+    <div class="body page-variants">
+      <div class="header-nav">
+        <div class="right">
+          <a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+            <!-- span.title Open in GitHub-->
+            <span class="icon -github"></span>
+          </a>
         </div>
-        <div class="markdown-body"><h1 id="variants">Variants</h1>
-<p>Components may have variants. Elements may have variants, too.</p>
-<p><img src="images/component-modifiers.png" alt=""></p>
-<br>
-<h2 id="naming-variants">Naming variants</h2>
-<p>Classnames for variants will be prefixed by a dash (<code>-</code>).</p>
-<pre><code class="lang-scss"><span class="hljs-selector-class">.like-button</span> {
+      </div>
+      <div class="markdown-body">
+        <h1 id="variants">Variantes</h1>
+        <p>Componentes podem ter variantes. Elementos também podem ter variantes.</p>
+        <p>
+          <img src="images/component-modifiers.png" alt="">
+        </p>
+        <br>
+        <h2 id="naming-variants">Nomeando variantes</h2>
+        <p>Nomes de classes para variantes devem ser prefixados por um traço (
+          <code>-</code> ).</p>
+        <pre><code class="lang-scss"><span class="hljs-selector-class">.like-button</span> {
   &amp;<span class="hljs-selector-class">.-wide</span> { <span class="pl-c">/* ... */</span> }
   &amp;<span class="hljs-selector-class">.-short</span> { <span class="pl-c">/* ... */</span> }
   &amp;<span class="hljs-selector-class">.-disabled</span> { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
-<h2 id="element-variants">Element variants</h2>
-<p>Elements may also have variants.</p>
-<pre><code class="lang-scss"><span class="hljs-selector-class">.shopping-card</span> {
+        <h2 id="element-variants">Variantes de elementos</h2>
+        <p>Elementos também podem ter variantes.</p>
+        <pre><code class="lang-scss"><span class="hljs-selector-class">.shopping-card</span> {
   &gt; <span class="hljs-selector-class">.title</span> { <span class="pl-c">/* ... */</span> }
   &gt; <span class="hljs-selector-class">.title</span><span class="hljs-selector-class">.-small</span> { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
-<h2 id="dash-prefixes">Dash prefixes</h2>
-<p>Dashes are the preferred prefix for variants.</p>
-<ul>
-<li>It prevents ambiguity with elements.</li>
-<li>A CSS class can only start with a letter, <code>_</code> or <code>-</code>.</li>
-<li>Dashes are easier to type than underscores.</li>
-<li>It kind of resembles switches in UNIX commands (<code>gcc -O2 -Wall -emit-last</code>).</li>
-</ul>
-<p class="pull-box">How do you deal with complex elements? Nest them.
-<a href="nested-components.html">Continue &#x2192;</a></p>
+        <h2 id="dash-prefixes">Prefixos com traços</h2>
+        <p>Traços são o prefixo recomendados para as variantes.</p>
+        <ul>
+          <li>Evita ambiguidades com elementos.</li>
+          <li>Uma classe CSS só pode começar com uma letra,
+            <code>_</code> ou
+            <code>-</code>.</li>
+          <li>Traços são mais fáceis de digitar do que travessões.</li>
+          <li>Isso se assemelha a switches nos comandos UNIX (
+            <code>gcc -O2 -Wall -emit-last</code>).</li>
+        </ul>
+        <p class="pull-box">Como você lida com elementos complexos? Aninhando.
+          <a href="nested-components.html">Continue &#x2192;</a>
+        </p>
 
-        </div>
-        <div class="footer-nav">
-          <div class="left"><a href="elements.html"><span class="title">Elements</span></a></div>
-          <div class="right"><a href="nested-components.html"><span class="label">Next: </span><span class="title">Nested components</span></a></div>
-        </div>
       </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Components</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">About components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
-                </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title -active link-variants">Variants</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#naming-variants" class="hlink link-naming-variants">Naming variants</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#element-variants" class="hlink link-element-variants">Element variants</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#dash-prefixes" class="hlink link-dash-prefixes">Dash prefixes</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
-                </li>
-                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="css-structure.html" class="link title  link-css-structure">CSS Structure</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Notes</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
-                </li>
-                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
-                </li>
-                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">Other resources</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">Summary</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">External resources</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="translations.html" class="link title  link-translations">Translations</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <div class="footer-nav">
+        <div class="left">
+          <a href="elements.html">
+            <span class="title">Elementos</span>
+          </a>
+        </div>
+        <div class="right">
+          <a href="nested-components.html">
+            <span class="label">Próximo: </span>
+            <span class="title">Componentes aninhados</span>
+          </a>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="menu toc-menu">
+      <li class="menu-item -level-0 -parent">
+        <ul class="submenu">
+          <li class="menu-item -level-1">
+            <a href="index.html" class="link title  link-index">rscss</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Componentes</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="components.html" class="link title  link-components">Sobre componentes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="elements.html" class="link title  link-elements">Elementos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="variants.html" class="link title -active link-variants">Variantes</a>
+                <ul class="headings heading-list">
+                  <li class="heading-item -depth-2">
+                    <a href="#naming-variants" class="hlink link-naming-variants">Nomeando variantes</a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#element-variants" class="hlink link-element-variants">Variantes de elementos</a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#dash-prefixes" class="hlink link-dash-prefixes">Prefixos com traços</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="nested-components.html" class="link title  link-nested-components">Componentes aninhados</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="layouts.html" class="link title  link-layouts">Layouts</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="helpers.html" class="link title  link-helpers">Helpers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Estrutura</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="css-structure.html" class="link title  link-css-structure">Estrutura CSS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Observações</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="pitfalls.html" class="link title  link-pitfalls">Obstáculos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="apprehensions.html" class="link title  link-apprehensions">Receios</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="other-resources.html" class="link title  link-other-resources">Outros recursos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1">
+            <a href="summary.html" class="link title  link-summary">Resumo</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Recursos externos</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="translations.html" class="link title  link-translations">Traduções</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+</body>
+
 </html>

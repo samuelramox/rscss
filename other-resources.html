@@ -1,146 +1,196 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
-    <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>Other resources</title>
-    <meta name="viewport" content="width=device-width">
-    <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
-        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
-      }
-    </script>
-  </head>
-  <body class="-menu-visible">
-    <div class="doc-layout">
-      <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-other-resources">
-        <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
-              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+  <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+  <script src="assets/script.js?t=2bcc4b59"></script>
+  <title>Outros recursos</title>
+  <meta name="viewport" content="width=device-width">
+  <script>
+    if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      (function (d, o, c, p, r, e, s) {
+        d['GoogleAnalyticsObject'] = r;
+        d[r] = d[r] || function () {
+          (d[r].q = d[r].q || []).push(arguments)
+        }, d[r].l = 1 * new Date();
+        e = o.createElement(c), s = o.getElementsByTagName(c)[0];
+        e.async = 1;
+        e.src = p;
+        s.parentNode.insertBefore(e, s)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', "UA-70062028-1", 'auto')
+    }
+  </script>
+</head>
+
+<body class="-menu-visible">
+  <div class="doc-layout">
+    <div class="toggle menu-toggle js-menu-toggle"></div>
+    <div class="body page-other-resources">
+      <div class="header-nav">
+        <div class="right">
+          <a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+            <!-- span.title Open in GitHub-->
+            <span class="icon -github"></span>
+          </a>
         </div>
-        <div class="markdown-body"><h1 id="other-resources">Other resources</h1>
-<ul>
-<li><a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss#49">ITCSS</a> (&quot;Inverted Triangle CSS&quot;) is a nice complement to any rscss structure.</li>
-<li><a href="http://ricostacruz.com/rsjs/">rsjs</a> (&quot;Reasonable Standard of JavaScript Structure&quot;) is a work-in-progress document for structuring JavaScript on basic sites.</li>
-</ul>
-<h2 id="other-solutions">Other solutions</h2>
-<h3 id="bem">BEM</h3>
-<p><a href="http://bem.info/">BEM</a> is nice, but some may be irked at its unconventional syntax. RSCSS pretty much follows BEM conventions, only with a different syntax.</p>
-<pre><code class="lang-html"><span class="pl-c">&lt;!-- BEM --&gt;</span>
+      </div>
+      <div class="markdown-body">
+        <h1 id="other-resources">Outros recursos</h1>
+        <ul>
+          <li>
+            <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss#49">ITCSS</a> (&quot;Inverted Triangle CSS&quot;) é um bom complemento para qualquer estrutura rscss.</li>
+          <li>
+            <a href="http://ricostacruz.com/rsjs/">rsjs</a> (&quot;Reasonable Standard of JavaScript Structure&quot;) é uma documentação em andamento para estruturar
+            JavaScript em sites básicos.</li>
+        </ul>
+        <h2 id="other-solutions">Outras soluções</h2>
+        <h3 id="bem">BEM</h3>
+        <p>
+          <a href="http://bem.info/">BEM</a> é legal, mas alguns podem se irritar com a sua sintaxe pouco convencional. RSCSS praticamente segue as
+          convenções BEM, apenas com uma sintaxe diferente.</p>
+        <pre><code class="lang-html"><span class="pl-c">&lt;!-- BEM --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="pl-s">&apos;site-search site-search--full&apos;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">class</span>=<span class="pl-s">&apos;site-search__field&apos;</span> <span class="hljs-attr">type</span>=<span class="pl-s">&apos;text&apos;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="pl-s">&apos;site-search__button&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-html"><span class="pl-c">&lt;!-- rscss --&gt;</span>
+        <pre><code class="lang-html"><span class="pl-c">&lt;!-- rscss --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="pl-s">&apos;site-search -full&apos;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">class</span>=<span class="pl-s">&apos;field&apos;</span> <span class="hljs-attr">type</span>=<span class="pl-s">&apos;text&apos;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="pl-s">&apos;button&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
-<h2 id="terminologies">Terminologies</h2>
-<p>The same concepts exist in similar ways in other CSS structuring ideologies.</p>
-<table>
-<thead>
-<tr>
-<th>RSCSS</th>
-<th>BEM</th>
-<th>SMACSS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Component</td>
-<td>Block</td>
-<td>Module</td>
-</tr>
-<tr>
-<td>Element</td>
-<td>Element</td>
-<td>Sub-Component</td>
-</tr>
-<tr>
-<td>Layout</td>
-<td>?</td>
-<td>Layout</td>
-</tr>
-<tr>
-<td>Variant</td>
-<td>Modifier</td>
-<td>Sub-Module &amp; State</td>
-</tr>
-</tbody>
-</table>
+        <h2 id="terminologies">Terminologias</h2>
+        <p>Os mesmos conceitos existem de maneiras semelhantes em outras ideologias de estrutura CSS.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>RSCSS</th>
+              <th>BEM</th>
+              <th>SMACSS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Component</td>
+              <td>Block</td>
+              <td>Module</td>
+            </tr>
+            <tr>
+              <td>Element</td>
+              <td>Element</td>
+              <td>Sub-Component</td>
+            </tr>
+            <tr>
+              <td>Layout</td>
+              <td>?</td>
+              <td>Layout</td>
+            </tr>
+            <tr>
+              <td>Variant</td>
+              <td>Modifier</td>
+              <td>Sub-Module &amp; State</td>
+            </tr>
+          </tbody>
+        </table>
 
-        </div>
-        <div class="footer-nav">
-          <div class="left"><a href="apprehensions.html"><span class="title">Apprehensions</span></a></div>
-          <div class="right"><a href="summary.html"><span class="label">Next: </span><span class="title">Summary</span></a></div>
-        </div>
       </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Components</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">About components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
-                </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
-                </li>
-                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
-                </li>
-                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="css-structure.html" class="link title  link-css-structure">CSS Structure</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Notes</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
-                </li>
-                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
-                </li>
-                <li class="menu-item -level-2"><a href="other-resources.html" class="link title -active link-other-resources">Other resources</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#other-solutions" class="hlink link-other-solutions">Other solutions</a>
-                      <ul class="heading-list -depth-2">
-                        <li class="heading-item -depth-3"><a href="#bem" class="hlink link-bem">BEM</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#terminologies" class="hlink link-terminologies">Terminologies</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">Summary</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">External resources</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="translations.html" class="link title  link-translations">Translations</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <div class="footer-nav">
+        <div class="left">
+          <a href="apprehensions.html">
+            <span class="title">Receios</span>
+          </a>
+        </div>
+        <div class="right">
+          <a href="summary.html">
+            <span class="label">Próximo: </span>
+            <span class="title">Resumo</span>
+          </a>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="menu toc-menu">
+      <li class="menu-item -level-0 -parent">
+        <ul class="submenu">
+          <li class="menu-item -level-1">
+            <a href="index.html" class="link title  link-index">rscss</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Componentes</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="components.html" class="link title  link-components">Sobre componentes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="elements.html" class="link title  link-elements">Elementos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="variants.html" class="link title  link-variants">Variantes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="nested-components.html" class="link title  link-nested-components">Componentes aninhados</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="layouts.html" class="link title  link-layouts">Layouts</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="helpers.html" class="link title  link-helpers">Helpers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Estrutura</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="css-structure.html" class="link title  link-css-structure">Estrutura CSS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Observações</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="pitfalls.html" class="link title  link-pitfalls">Obstáculos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="apprehensions.html" class="link title  link-apprehensions">Receios</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="other-resources.html" class="link title -active link-other-resources">Outros recursos</a>
+                <ul class="headings heading-list">
+                  <li class="heading-item -depth-2">
+                    <a href="#other-solutions" class="hlink link-other-solutions">Outras soluções</a>
+                    <ul class="heading-list -depth-2">
+                      <li class="heading-item -depth-3">
+                        <a href="#bem" class="hlink link-bem">BEM</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#terminologies" class="hlink link-terminologies">Terminologies</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1">
+            <a href="summary.html" class="link title  link-summary">Resumo</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Recursos externos</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="translations.html" class="link title  link-translations">Traduções</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+</body>
+
 </html>

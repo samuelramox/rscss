@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
-    <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>Layouts</title>
-    <meta name="viewport" content="width=device-width">
-    <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
-        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
-      }
-    </script>
-  </head>
-  <body class="-menu-visible">
-    <div class="doc-layout">
-      <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-layouts">
-        <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
-              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+  <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+  <script src="assets/script.js?t=2bcc4b59"></script>
+  <title>Layouts</title>
+  <meta name="viewport" content="width=device-width">
+  <script>
+    if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      (function (d, o, c, p, r, e, s) {
+        d['GoogleAnalyticsObject'] = r;
+        d[r] = d[r] || function () {
+          (d[r].q = d[r].q || []).push(arguments)
+        }, d[r].l = 1 * new Date();
+        e = o.createElement(c), s = o.getElementsByTagName(c)[0];
+        e.async = 1;
+        e.src = p;
+        s.parentNode.insertBefore(e, s)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', "UA-70062028-1", 'auto')
+    }
+  </script>
+</head>
+
+<body class="-menu-visible">
+  <div class="doc-layout">
+    <div class="toggle menu-toggle js-menu-toggle"></div>
+    <div class="body page-layouts">
+      <div class="header-nav">
+        <div class="right">
+          <a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+            <!-- span.title Open in GitHub-->
+            <span class="icon -github"></span>
+          </a>
         </div>
-        <div class="markdown-body"><h1 id="layouts">Layouts</h1>
-<p><img src="images/layouts.png" alt=""></p>
-<h2 id="avoid-positioning-properties">Avoid positioning properties</h2>
-<p>Components should be made in a way that they&apos;re reusable in different contexts. Avoid putting these properties in components:</p>
-<ul>
-<li>Positioning (<code>position</code>, <code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>)</li>
-<li>Floats (<code>float</code>, <code>clear</code>)</li>
-<li>Margins (<code>margin</code>)</li>
-<li>Dimensions (<code>width</code>, <code>height</code>) *</li>
-</ul>
-<h2 id="fixed-dimensions">Fixed dimensions</h2>
-<p>Exception to these would be elements that have fixed width/heights, such as avatars and logos.</p>
-<h2 id="define-positioning-in-parents">Define positioning in parents</h2>
-<p>If you need to define these, try to define them in whatever context they will be in. In this example below, notice that the widths and floats are applied on the <em>list</em> component, not the component itself.</p>
-<pre><code class="lang-css">.article-list {
+      </div>
+      <div class="markdown-body">
+        <h1 id="layouts">Layouts</h1>
+        <p>
+          <img src="images/layouts.png" alt="">
+        </p>
+        <h2 id="avoid-positioning-properties">Evite propriedades de posicionamento</h2>
+        <p>Componentes devem ser feitos de forma a serem reutilizáveis ​​em diferentes contextos. Evite colocar essas propriedades
+          em componentes:</p>
+        <ul>
+          <li>Posicionamento (
+            <code>position</code>,
+            <code>top</code>,
+            <code>left</code>,
+            <code>right</code>,
+            <code>bottom</code>)</li>
+          <li>Flutuadores (
+            <code>float</code>,
+            <code>clear</code>)</li>
+          <li>Margens (
+            <code>margin</code>)</li>
+          <li>Dimensões (
+            <code>width</code>,
+            <code>height</code>) *</li>
+        </ul>
+        <h2 id="fixed-dimensions">Dimensões fixas</h2>
+        <p>Exceção a isso podem ser os elementos que possuem largura/alturas fixas, como avatares e logotipos.</p>
+        <h2 id="define-positioning-in-parents">Definir posicionamento nos pais</h2>
+        <p>Se você precisar definir isso, tente defini-los no contexto em que estão. No exemplo abaixo, observe que width e
+          float são aplicados no componente da
+          <em>lista</em>, e não no componente em si.</p>
+        <pre><code class="lang-css">.article-list {
   &amp; {
     @include clearfix;
   }
@@ -55,71 +85,102 @@
   &gt; .category { /* ... */ }
 }
 </code></pre>
-<p class="pull-box">How do you apply margins outside a layout? Try it with Helpers.
-<a href="helpers.html">Continue &#x2192;</a></p>
+        <p class="pull-box">Como você aplica margens fora de um layout? Tente com os Helpers.
+          <a href="helpers.html">Continue &#x2192;</a>
+        </p>
 
-        </div>
-        <div class="footer-nav">
-          <div class="left"><a href="nested-components.html"><span class="title">Nested components</span></a></div>
-          <div class="right"><a href="helpers.html"><span class="label">Next: </span><span class="title">Helpers</span></a></div>
-        </div>
       </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Components</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">About components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
-                </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
-                </li>
-                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="layouts.html" class="link title -active link-layouts">Layouts</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#avoid-positioning-properties" class="hlink link-avoid-positioning-properties">Avoid positioning properties</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#fixed-dimensions" class="hlink link-fixed-dimensions">Fixed dimensions</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#define-positioning-in-parents" class="hlink link-define-positioning-in-parents">Define positioning in parents</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="css-structure.html" class="link title  link-css-structure">CSS Structure</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Notes</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
-                </li>
-                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
-                </li>
-                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">Other resources</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">Summary</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">External resources</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="translations.html" class="link title  link-translations">Translations</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <div class="footer-nav">
+        <div class="left">
+          <a href="nested-components.html">
+            <span class="title">Componentes aninhados</span>
+          </a>
+        </div>
+        <div class="right">
+          <a href="helpers.html">
+            <span class="label">Próximo: </span>
+            <span class="title">Helpers</span>
+          </a>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="menu toc-menu">
+      <li class="menu-item -level-0 -parent">
+        <ul class="submenu">
+          <li class="menu-item -level-1">
+            <a href="index.html" class="link title  link-index">rscss</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Componentes</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="components.html" class="link title  link-components">Sobre componentes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="elements.html" class="link title  link-elements">Elementos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="variants.html" class="link title  link-variants">Variantes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="nested-components.html" class="link title  link-nested-components">Componentes aninhados</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="layouts.html" class="link title -active link-layouts">Layouts</a>
+                <ul class="headings heading-list">
+                  <li class="heading-item -depth-2">
+                    <a href="#avoid-positioning-properties" class="hlink link-avoid-positioning-properties">Evite propriedades de posicionamento</a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#fixed-dimensions" class="hlink link-fixed-dimensions">Dimensões fixas</a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#define-positioning-in-parents" class="hlink link-define-positioning-in-parents">Definir posicionamento nos pais</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="helpers.html" class="link title  link-helpers">Helpers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Estrutura</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="css-structure.html" class="link title  link-css-structure">Estrutura CSS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Observações</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="pitfalls.html" class="link title  link-pitfalls">Obstáculos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="apprehensions.html" class="link title  link-apprehensions">Receios</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="other-resources.html" class="link title  link-other-resources">Outros recursos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1">
+            <a href="summary.html" class="link title  link-summary">Resumo</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Recursos externos</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="translations.html" class="link title  link-translations">Traduções</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+</body>
+
 </html>

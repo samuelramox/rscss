@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
-    <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>CSS Structure</title>
-    <meta name="viewport" content="width=device-width">
-    <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
-        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
-      }
-    </script>
-  </head>
-  <body class="-menu-visible">
-    <div class="doc-layout">
-      <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-css-structure">
-        <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
-              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+  <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+  <script src="assets/script.js?t=2bcc4b59"></script>
+  <title>Estrutura CSS</title>
+  <meta name="viewport" content="width=device-width">
+  <script>
+    if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      (function (d, o, c, p, r, e, s) {
+        d['GoogleAnalyticsObject'] = r;
+        d[r] = d[r] || function () {
+          (d[r].q = d[r].q || []).push(arguments)
+        }, d[r].l = 1 * new Date();
+        e = o.createElement(c), s = o.getElementsByTagName(c)[0];
+        e.async = 1;
+        e.src = p;
+        s.parentNode.insertBefore(e, s)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', "UA-70062028-1", 'auto')
+    }
+  </script>
+</head>
+
+<body class="-menu-visible">
+  <div class="doc-layout">
+    <div class="toggle menu-toggle js-menu-toggle"></div>
+    <div class="body page-css-structure">
+      <div class="header-nav">
+        <div class="right">
+          <a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+            <!-- span.title Open in GitHub-->
+            <span class="icon -github"></span>
+          </a>
         </div>
-        <div class="markdown-body"><h1 id="css-structure">CSS structure</h1>
-<h2 id="one-component-per-file">One component per file</h2>
-<p>For each component, place them in their own file.</p>
-<pre><code class="lang-scss"><span class="pl-c">/* css/components/search-form.scss */</span>
+      </div>
+      <div class="markdown-body">
+        <h1 id="css-structure">Estrutura CSS</h1>
+        <h2 id="one-component-per-file">Um componente por arquivo</h2>
+        <p>Coloque cada componente em seu próprio arquivo.</p>
+        <pre><code class="lang-scss"><span class="pl-c">/* css/components/search-form.scss */</span>
 <span class="hljs-selector-class">.search-form</span> {
   &gt; <span class="hljs-selector-class">.button</span> { <span class="pl-c">/* ... */</span> }
   &gt; <span class="hljs-selector-class">.field</span> { <span class="pl-c">/* ... */</span> }
@@ -37,13 +52,13 @@
   &amp;<span class="hljs-selector-class">.-wide</span> { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
-<h2 id="use-glob-matching">Use glob matching</h2>
-<p>In sass-rails and stylus, this makes including all of them easy:</p>
-<pre><code class="lang-scss">@<span class="pl-k">import</span> <span class="pl-s">&apos;components/*&apos;</span>;
+        <h2 id="use-glob-matching">Use padrões globais</h2>
+        <p>Em sass-rails e stylus, a instrução abaixo inclui todos os componentes facilmente:</p>
+        <pre><code class="lang-scss">@<span class="pl-k">import</span> <span class="pl-s">&apos;components/*&apos;</span>;
 </code></pre>
-<h2 id="avoid-over-nesting">Avoid over-nesting</h2>
-<p>Use no more than 1 level of nesting. It&apos;s easy to get lost with too much nesting.</p>
-<pre><code class="lang-scss"><span class="pl-c">/* &#x2717; Avoid: 3 levels of nesting */</span>
+        <h2 id="avoid-over-nesting">Evite excesso de aninhamento</h2>
+        <p>Não use mais do que 1 nível de aninhamento. É fácil se perder com muito aninhamento.</p>
+        <pre><code class="lang-scss"><span class="pl-c">/* &#x2717; Evite: 3 níveis de aninhamento */</span>
 <span class="hljs-selector-class">.image-frame</span> {
   &gt; <span class="hljs-selector-class">.description</span> {
     <span class="pl-c">/* ... */</span>
@@ -54,75 +69,107 @@
   }
 }
 
-<span class="pl-c">/* &#x2713; Better: 2 levels */</span>
+<span class="pl-c">/* &#x2713; Melhor: 2 níveis */</span>
 <span class="hljs-selector-class">.image-frame</span> {
   &gt; <span class="hljs-selector-class">.description</span> { <span class="pl-c">/* ... */</span> }
   &gt; <span class="hljs-selector-class">.description</span> &gt; <span class="hljs-selector-class">.icon</span> { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
 
-        </div>
-        <div class="footer-nav">
-          <div class="left"><a href="helpers.html"><span class="title">Helpers</span></a></div>
-          <div class="right"><a href="pitfalls.html"><span class="label">Next: </span><span class="title">Pitfalls</span></a></div>
-        </div>
       </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Components</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">About components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
-                </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
-                </li>
-                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
-                </li>
-                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="css-structure.html" class="link title -active link-css-structure">CSS Structure</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#one-component-per-file" class="hlink link-one-component-per-file">One component per file</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#use-glob-matching" class="hlink link-use-glob-matching">Use glob matching</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#avoid-over-nesting" class="hlink link-avoid-over-nesting">Avoid over-nesting</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Notes</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
-                </li>
-                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
-                </li>
-                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">Other resources</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">Summary</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">External resources</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="translations.html" class="link title  link-translations">Translations</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <div class="footer-nav">
+        <div class="left">
+          <a href="helpers.html">
+            <span class="title">Helpers</span>
+          </a>
+        </div>
+        <div class="right">
+          <a href="pitfalls.html">
+            <span class="label">Próximo: </span>
+            <span class="title">Obstáculos</span>
+          </a>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="menu toc-menu">
+      <li class="menu-item -level-0 -parent">
+        <ul class="submenu">
+          <li class="menu-item -level-1">
+            <a href="index.html" class="link title  link-index">rscss</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Componentes</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="components.html" class="link title  link-components">Sobre componentes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="elements.html" class="link title  link-elements">Elementos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="variants.html" class="link title  link-variants">Variantes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="nested-components.html" class="link title  link-nested-components">Componentes aninhados</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="layouts.html" class="link title  link-layouts">Layouts</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="helpers.html" class="link title  link-helpers">Helpers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Estrutura</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="css-structure.html" class="link title -active link-css-structure">Estrutura CSS</a>
+                <ul class="headings heading-list">
+                  <li class="heading-item -depth-2">
+                    <a href="#one-component-per-file" class="hlink link-one-component-per-file">Um componente por arquivo
+                    </a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#use-glob-matching" class="hlink link-use-glob-matching">Use padrões globais
+                    </a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#avoid-over-nesting" class="hlink link-avoid-over-nesting">Evite excesso de aninhamento</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Observações</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="pitfalls.html" class="link title  link-pitfalls">Obstáculos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="apprehensions.html" class="link title  link-apprehensions">Receios</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="other-resources.html" class="link title  link-other-resources">Outros recursos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1">
+            <a href="summary.html" class="link title  link-summary">Resumo</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Recursos externos</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="translations.html" class="link title  link-translations">Traduções</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+</body>
+
 </html>

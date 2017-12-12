@@ -1,127 +1,180 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
-    <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>Elements</title>
-    <meta name="viewport" content="width=device-width">
-    <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
-        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
-      }
-    </script>
-  </head>
-  <body class="-menu-visible">
-    <div class="doc-layout">
-      <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-elements">
-        <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
-              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+  <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+  <script src="assets/script.js?t=2bcc4b59"></script>
+  <title>Elementos</title>
+  <meta name="viewport" content="width=device-width">
+  <script>
+    if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      (function (d, o, c, p, r, e, s) {
+        d['GoogleAnalyticsObject'] = r;
+        d[r] = d[r] || function () {
+          (d[r].q = d[r].q || []).push(arguments)
+        }, d[r].l = 1 * new Date();
+        e = o.createElement(c), s = o.getElementsByTagName(c)[0];
+        e.async = 1;
+        e.src = p;
+        s.parentNode.insertBefore(e, s)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', "UA-70062028-1", 'auto')
+    }
+  </script>
+</head>
+
+<body class="-menu-visible">
+  <div class="doc-layout">
+    <div class="toggle menu-toggle js-menu-toggle"></div>
+    <div class="body page-elements">
+      <div class="header-nav">
+        <div class="right">
+          <a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+            <!-- span.title Open in GitHub-->
+            <span class="icon -github"></span>
+          </a>
         </div>
-        <div class="markdown-body"><h1 id="elements">Elements</h1>
-<p>Elements are things inside your component.</p>
-<p><img src="images/component-elements.png" alt=""></p>
-<h2 id="naming-elements">Naming elements</h2>
-<p>Each component may have elements. They should have classes that are only <strong>one word</strong>.</p>
-<pre><code class="lang-scss"><span class="hljs-selector-class">.search-form</span> {
+      </div>
+      <div class="markdown-body">
+        <h1 id="elements">Elementos</h1>
+        <p>Elementos são coisas dentro do seu componente.</p>
+        <p>
+          <img src="images/component-elements.png" alt="">
+        </p>
+        <h2 id="naming-elements">Nomeando elementos</h2>
+        <p>Cada componente pode ter elementos. Eles devem ser classes que são apenas
+          <strong>uma palavra</strong>.</p>
+        <pre><code class="lang-scss"><span class="hljs-selector-class">.search-form</span> {
   &gt; <span class="hljs-selector-class">.field</span> { <span class="pl-c">/* ... */</span> }
   &gt; <span class="hljs-selector-class">.action</span> { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
-<h2 id="element-selectors">Element selectors</h2>
-<p>Prefer to use the <code>&gt;</code> child selector whenever possible. This prevents bleeding through nested components, and performs better than descendant selectors.</p>
-<pre><code class="lang-scss"><span class="hljs-selector-class">.article-card</span> {
+        <h2 id="element-selectors">Seletores de elementos</h2>
+        <p>Prefira usar o seletor de filho
+          <code>&gt;</code> sempre que possível. Isto evita conflitos através de componentes aninhados e funciona melhor do que
+          seletores descendentes.</p>
+        <pre><code class="lang-scss"><span class="hljs-selector-class">.article-card</span> {
   <span class="hljs-selector-class">.title</span>     { <span class="pl-c">/* okay */</span> }
-  &gt; <span class="hljs-selector-class">.author</span>  { <span class="pl-c">/* &#x2713; better */</span> }
+  &gt; <span class="hljs-selector-class">.author</span>  { <span class="pl-c">/* &#x2713; melhor */</span> }
 }
 </code></pre>
-<h2 id="on-multiple-words">On multiple words</h2>
-<p>For those that need two or more words, concatenate them without dashes or underscores.</p>
-<pre><code class="lang-scss"><span class="hljs-selector-class">.profile-box</span> {
+        <h2 id="on-multiple-words">Com várias palavras</h2>
+        <p>Para classes que precisam de duas ou mais palavras, concatene-os sem traços ou travessões.</p>
+        <pre><code class="lang-scss"><span class="hljs-selector-class">.profile-box</span> {
   &gt; <span class="hljs-selector-class">.firstname</span> { <span class="pl-c">/* ... */</span> }
   &gt; <span class="hljs-selector-class">.lastname</span> { <span class="pl-c">/* ... */</span> }
   &gt; <span class="hljs-selector-class">.avatar</span> { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
-<h2 id="avoid-tag-selectors">Avoid tag selectors</h2>
-<p>Use classnames whenever possible. Tag selectors are fine, but they may come at a small performance penalty and may not be as descriptive.</p>
-<pre><code class="lang-scss"><span class="hljs-selector-class">.article-card</span> {
-  &gt; <span class="hljs-selector-tag">h3</span>    { <span class="pl-c">/* &#x2717; avoid */</span> }
-  &gt; <span class="hljs-selector-class">.name</span> { <span class="pl-c">/* &#x2713; better */</span> }
+        <h2 id="avoid-tag-selectors">Evite seletores de tags</h2>
+        <p>Use classes sempre que possível. Os seletores de tag são bons, mas podem ter uma pequena penalidade no desempenho
+          e não são tão descritivos.</p>
+        <pre><code class="lang-scss"><span class="hljs-selector-class">.article-card</span> {
+  &gt; <span class="hljs-selector-tag">h3</span>    { <span class="pl-c">/* &#x2717; evitar */</span> }
+  &gt; <span class="hljs-selector-class">.name</span> { <span class="pl-c">/* &#x2713; melhor */</span> }
 }
 </code></pre>
-<p class="pull-box">Not all elements should always look the same. Variants can help.
-<a href="variants.html">Continue &#x2192;</a></p>
+        <p class="pull-box">Nem todos os elementos devem sempre parecer os mesmos. Variantes podem ajudar.
+          <a href="variants.html">Continue &#x2192;</a>
+        </p>
 
-        </div>
-        <div class="footer-nav">
-          <div class="left"><a href="components.html"><span class="title">About components</span></a></div>
-          <div class="right"><a href="variants.html"><span class="label">Next: </span><span class="title">Variants</span></a></div>
-        </div>
       </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Components</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">About components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="elements.html" class="link title -active link-elements">Elements</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#naming-elements" class="hlink link-naming-elements">Naming elements</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#element-selectors" class="hlink link-element-selectors">Element selectors</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#on-multiple-words" class="hlink link-on-multiple-words">On multiple words</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#avoid-tag-selectors" class="hlink link-avoid-tag-selectors">Avoid tag selectors</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
-                </li>
-                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
-                </li>
-                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="css-structure.html" class="link title  link-css-structure">CSS Structure</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Notes</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
-                </li>
-                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
-                </li>
-                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">Other resources</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">Summary</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">External resources</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="translations.html" class="link title  link-translations">Translations</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <div class="footer-nav">
+        <div class="left">
+          <a href="components.html">
+            <span class="title">Sobre componentes</span>
+          </a>
+        </div>
+        <div class="right">
+          <a href="variants.html">
+            <span class="label">Próximo: </span>
+            <span class="title">Variantes</span>
+          </a>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="menu toc-menu">
+      <li class="menu-item -level-0 -parent">
+        <ul class="submenu">
+          <li class="menu-item -level-1">
+            <a href="index.html" class="link title  link-index">rscss</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Componentes</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="components.html" class="link title  link-components">Sobre componentes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="elements.html" class="link title -active link-elements">Elementos</a>
+                <ul class="headings heading-list">
+                  <li class="heading-item -depth-2">
+                    <a href="#naming-elements" class="hlink link-naming-elements">Nomeando elementos</a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#element-selectors" class="hlink link-element-selectors">Seletores de elementos</a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#on-multiple-words" class="hlink link-on-multiple-words">Com várias palavras</a>
+                  </li>
+                  <li class="heading-item -depth-2">
+                    <a href="#avoid-tag-selectors" class="hlink link-avoid-tag-selectors">Evite seletores de tags</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="variants.html" class="link title  link-variants">Variantes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="nested-components.html" class="link title  link-nested-components">Componentes aninhados</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="layouts.html" class="link title  link-layouts">Layouts</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="helpers.html" class="link title  link-helpers">Helpers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Estrutura</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="css-structure.html" class="link title  link-css-structure">Estrutura CSS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Observações</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="pitfalls.html" class="link title  link-pitfalls">Obstáculos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="apprehensions.html" class="link title  link-apprehensions">Receios</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="other-resources.html" class="link title  link-other-resources">Outros recursos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1">
+            <a href="summary.html" class="link title  link-summary">Resumo</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Recursos externos</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="translations.html" class="link title  link-translations">Traduções</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+</body>
+
 </html>

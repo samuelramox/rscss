@@ -1,112 +1,164 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
-    <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>rscss</title>
-    <meta name="viewport" content="width=device-width">
-    <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
-        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
-      }
-    </script>
-  </head>
-  <body class="-menu-visible">
-    <div class="doc-layout">
-      <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-index">
-        <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
-              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
-          </div>
-        </div>
-        <div class="markdown-body"><h5 style="display:none" id="viewing-this-from-github-visit-the-website-for-the-full-experience.-rscss.io">Viewing this from GitHub? Visit the website for the full experience. <strong><a href="http://rscss.io">rscss.io &#x2192;</a></strong></h5>
-<hr style="display:none">
-<h1 class="massive-header -with-tagline" id="rscss">rscss</h1>
-<blockquote>
-<p>Styling CSS without losing&#xA0;your sanity</p>
-</blockquote>
-<p>Reasonable System for CSS Stylesheet Structure.<br>
-A set of simple ideas to guide your process of building maintainable CSS.</p>
-<h2 id="introduction">Introduction</h2>
-<p>Any CSS greater than 1000 lines will get unwieldy. You&apos;ll eventually run into these common pitfalls:</p>
-<ul>
-<li>&quot;What does this class mean?&quot;</li>
-<li>&quot;Is this class still being used?&quot;</li>
-<li>&quot;If I make a new class <code>green</code>, will there be a clash?&quot;</li>
-</ul>
-<p><strong>rscss</strong> is an attempt to make sense of all these. It is not a framework. It&apos;s simply a set of ideas to guide your process of building maintainable CSS for any modern website or application.</p>
-<p class="pull-box">Let&apos;s get started by learning about components.
-<a href="components.html">Continue &#x2192;</a></p>
-<hr style="display:none">
-<p style="display:none"><strong>rscss</strong> &#xA9; 2015+, Rico Sta. Cruz. Released under the <a href="http://mit-license.org/">MIT</a> License.<br>
-Authored and maintained by Rico Sta. Cruz with help from contributors (<a href="http://github.com/rstacruz/rscss/contributors">list</a>).</p>
-<blockquote style="display:none">
-<p><a href="http://ricostacruz.com">ricostacruz.com</a> &#xA0;&#xB7;&#xA0;
-GitHub <a href="https://github.com/rstacruz">@rstacruz</a> &#xA0;&#xB7;&#xA0;
-Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
-</blockquote>
 
-        </div>
-        <div class="footer-nav">
-          <div class="right"><a href="components.html"><span class="label">Next: </span><span class="title">About components</span></a></div>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+  <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+  <script src="assets/script.js?t=2bcc4b59"></script>
+  <title>rscss</title>
+  <meta name="viewport" content="width=device-width">
+  <script>
+    if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      (function (d, o, c, p, r, e, s) {
+        d['GoogleAnalyticsObject'] = r;
+        d[r] = d[r] || function () {
+          (d[r].q = d[r].q || []).push(arguments)
+        }, d[r].l = 1 * new Date();
+        e = o.createElement(c), s = o.getElementsByTagName(c)[0];
+        e.async = 1;
+        e.src = p;
+        s.parentNode.insertBefore(e, s)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', "UA-70062028-1", 'auto')
+    }
+  </script>
+</head>
+
+<body class="-menu-visible">
+  <div class="doc-layout">
+    <div class="toggle menu-toggle js-menu-toggle"></div>
+    <div class="body page-index">
+      <div class="header-nav">
+        <div class="right">
+          <a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+            <!-- span.title Open in GitHub-->
+            <span class="icon -github"></span>
+          </a>
         </div>
       </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">rscss</a>
-              <ul class="headings heading-list">
-                <li class="heading-item -depth-2"><a href="#introduction" class="hlink link-introduction">Introduction</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Components</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">About components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
-                </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
-                </li>
-                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
-                </li>
-                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
-                </li>
-                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="css-structure.html" class="link title  link-css-structure">CSS Structure</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Notes</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
-                </li>
-                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
-                </li>
-                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">Other resources</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">Summary</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">External resources</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="translations.html" class="link title  link-translations">Translations</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <div class="markdown-body">
+        <h5 style="display:none" id="viewing-this-from-github-visit-the-website-for-the-full-experience.-rscss.io">Visualizando isso no GitHub? Visite o site para uma experiência mais completa.
+          <strong>
+            <a href="http://rscss.io">rscss.io &#x2192;</a>
+          </strong>
+        </h5>
+        <hr style="display:none">
+        <h1 class="massive-header -with-tagline" id="rscss">rscss</h1>
+        <blockquote>
+          <p>Escrevendo CSS sem perder&#xA0;sua sanidade</p>
+        </blockquote>
+        <p>Reasonable System for CSS Stylesheet Structure.
+          <br> Um conjunto de ideias simples para orientar seu processo de construção de CSS escalável.</p>
+        <h2 id="introduction">Introdução</h2>
+        <p>Qualquer CSS com mais de 1000 linhas ficará complicado. Você acabará encontrando esses obstáculos comuns:</p>
+        <ul>
+          <li>&quot;O que significa esta classe?&quot;</li>
+          <li>&quot;Esta classe ainda está sendo usada?&quot;</li>
+          <li>&quot;Se eu fizer uma nova classe
+            <code>green</code>, ocorrerá um conflito?&quot;</li>
+        </ul>
+        <p>
+          <strong>rscss</strong> é uma tentativa de dar sentido a tudo isso. Não é um framework. É simplesmente um conjunto de ideias
+          para orientar seu processo de construção de CSS escalável para qualquer site moderno ou aplicativo.</p>
+        <p class="pull-box">Vamos começar aprendendo sobre componentes.
+          <a href="components.html">Continue &#x2192;</a>
+        </p>
+        <hr style="display:none">
+        <p style="display:none">
+          <strong>rscss</strong> &#xA9; 2015+, Rico Sta. Cruz. Released under the
+          <a href="http://mit-license.org/">MIT</a> License.
+          <br> Authored and maintained by Rico Sta. Cruz with help from contributors (
+          <a href="http://github.com/rstacruz/rscss/contributors">list</a>).</p>
+        <blockquote style="display:none">
+          <p>
+            <a href="http://ricostacruz.com">ricostacruz.com</a> &#xA0;&#xB7;&#xA0; GitHub
+            <a href="https://github.com/rstacruz">@rstacruz</a> &#xA0;&#xB7;&#xA0; Twitter
+            <a href="https://twitter.com/rstacruz">@rstacruz</a>
+          </p>
+        </blockquote>
+
+      </div>
+      <div class="footer-nav">
+        <div class="right">
+          <a href="components.html">
+            <span class="label">Próximo: </span>
+            <span class="title">Sobre componentes</span>
+          </a>
+        </div>
       </div>
     </div>
-  </body>
+    <div class="menu toc-menu">
+      <li class="menu-item -level-0 -parent">
+        <ul class="submenu">
+          <li class="menu-item -level-1">
+            <a href="index.html" class="link title -active link-index">rscss</a>
+            <ul class="headings heading-list">
+              <li class="heading-item -depth-2">
+                <a href="#introduction" class="hlink link-introduction">Introdução</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Componentes</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="components.html" class="link title  link-components">Sobre componentes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="elements.html" class="link title  link-elements">Elementos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="variants.html" class="link title  link-variants">Variantes</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="nested-components.html" class="link title  link-nested-components">Componentes aninhados</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="layouts.html" class="link title  link-layouts">Layouts</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="helpers.html" class="link title  link-helpers">Helpers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Estrutura</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="css-structure.html" class="link title  link-css-structure">Estrutura CSS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Observações</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="pitfalls.html" class="link title  link-pitfalls">Obstáculos</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="apprehensions.html" class="link title  link-apprehensions">Receios</a>
+              </li>
+              <li class="menu-item -level-2">
+                <a href="other-resources.html" class="link title  link-other-resources">Outros recursos</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item -level-1">
+            <a href="summary.html" class="link title  link-summary">Resumo</a>
+          </li>
+          <li class="menu-item -level-1 -parent">
+            <span class="title">Recursos externos</span>
+            <ul class="submenu">
+              <li class="menu-item -level-2">
+                <a href="translations.html" class="link title  link-translations">Traduções</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+</body>
+
 </html>
