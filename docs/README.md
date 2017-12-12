@@ -12,8 +12,8 @@
   - [Estrutura CSS](css-structure.md)
 - **Observações**
   - [Obstáculos](pitfalls.md)
-  - [Dúvidas](apprehensions.md)
+  - [Receios](apprehensions.md)
   - [Outros recursos](other-resources.md)
-- [Sumário](summary.md)
+- [Resumo](summary.md)
 - **Recursos externos**
   - [Traduções](translations.md)
